@@ -1,0 +1,19 @@
+{
+  "name": "react-redux-threejs",
+  "version": "1.0.0",
+  "description": "React, Redux & Three.js App Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GLNRO/react-redux-threejs.git"
+  },
+  "author": "Lauren Gallinaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GLNRO/react-redux-threejs/issues"
+  },
+  "homepage": "https://github.com/GLNRO/react-redux-threejs#readme"
+}
