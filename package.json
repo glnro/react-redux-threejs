@@ -4,7 +4,8 @@
   "description": "React, Redux & Three.js App Template",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register test/index-spec.js"
+    "start": "node src/main.js",
+    "test": "mocha --compilers js:babel-core/register test/*"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
     "enzyme": "^2.7.1",
     "mocha": "^3.2.0",
     "redux-logger": "^2.8.1",
