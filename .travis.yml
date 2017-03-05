@@ -1,19 +1,27 @@
 language: node_js
 node_js:
   - "stable"
+
+sudo: required
+
 services:
   - docker
+
 branches:
   - /.*/
+
 before_install:
   - docker build -t lgallinaro/rr3js .
   - docker run lgallinaro/rr3js /bin/bash -c "npm test"
+
 install:
   - npm install
+
 script:
   - npm test
+
 after_success:
-  - if ["$TRAVIS_BRANCH" == "master" ]; then
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push lgallinaro/rr3js;
     fi
