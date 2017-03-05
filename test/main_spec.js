@@ -18,7 +18,6 @@ describe('server', () => {
       chai.request(server)
         .get('/')
         .end((err, res) => {
-          console.log(res);
           expect(res.status).to.equal(200);
           expect(res.text).to.equal('Node.js Server is running');
           server.close();
