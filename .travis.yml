@@ -25,4 +25,3 @@ after_success:
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push lgallinaro/rr3js;
     fi
-  - bash scripts/deploy-to-aws.sh
