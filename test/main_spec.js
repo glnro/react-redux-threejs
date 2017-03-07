@@ -1,6 +1,6 @@
 let chai = require('chai')
 let chaiHttp = require('chai-http')
-let server = require('../src/main.js')
+let server = require('../src/testServer.js')
 import {expect} from 'chai'
 chai.use(chaiHttp)
 
