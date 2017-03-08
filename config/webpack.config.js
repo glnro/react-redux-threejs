@@ -21,8 +21,9 @@ module.exports = {
   },
   module: {
     loaders:  [
-      {test: /\.jsx?$/, include: global + '/src', loader: 'babel-loader'},
-      {test: /\.(ttf|eot|svg|png|woff(2)?)(\?[a-z0-9=&.]+)?$/, include: global + '/src', loader: 'file-loader'}
+      {test: /\.js$/,include: __dirname + '/src',loader: 'babel-loader',query: {presets: ['react', 'es2015']} },
+      {test: /\.jsx?$/, include: root + '/src', loader: 'babel-loader'},
+      {test: /\.(ttf|eot|svg|png|woff(2)?)(\?[a-z0-9=&.]+)?$/, include: root + '/src', loader: 'file-loader'}
     ]
   },
   plugins: [HTMLWebpackPluginConfig]
