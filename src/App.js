@@ -15,7 +15,7 @@ class App extends Component {
   render() {
 
     return(
-      <Router><h1>Hello World</h1></Router>
+      <h1>Hello World</h1>
     )
 
   }
