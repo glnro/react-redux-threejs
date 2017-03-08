@@ -11,7 +11,7 @@ module.exports = {
   entry: './src/App.js',
   output: {
     filename: 'index_bundle.js',
-    path: './dist'
+    path: __dirname + './dist'
   },
   externals: {
     'react/addons': true,

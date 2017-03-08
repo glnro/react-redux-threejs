@@ -7,5 +7,5 @@ WORKDIR /usr/app
 COPY . /usr/app
 RUN npm install
 
-EXPOSE 4000
+EXPOSE 3001
 CMD ["npm","start"]

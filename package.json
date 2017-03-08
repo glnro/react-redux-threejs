@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config ./config/webpack.config.js",
-    "start": "node src/main.js",
-    "test": "mocha --compilers js:babel-core/register test/*"
+    "start": "webpack-dev-server --config  ./config/webpack.config.js --hot --inline --no-info --port 3001 --host 0.0.0.0 --history-api-fallback",
+    "test": "mocha --compilers js:babel-core/register test/*",
+    "smoke": "mocha --compilers js:babel-core/register test/smokes.js"
   },
   "repository": {
     "type": "git",
