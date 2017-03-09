@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import { Route, Router, Link, IndexRoute, browserHistory } from 'react-router';
 import { render } from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger'; //Debug tool
 import welcomeReducer from './welcome/welcomeReducer';
+import IndexComponent from './index/Index';
 import 'babel-polyfill';
 
 
@@ -15,7 +16,9 @@ class App extends Component {
   render() {
 
     return(
-      <h1>Hello World</h1>
+      <Router history={browserHistory}>
+        <Route path="/" component={IndexComponent} />
+      </Router>
     )
 
   }
