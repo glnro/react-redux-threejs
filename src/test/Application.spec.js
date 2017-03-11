@@ -22,6 +22,6 @@ describe('<App/>', () => {
         <Index/>
       </Provider>);
 
-    expect(wrapper.find('h1')).to.have.length(1);
+    expect(wrapper.find('div')).to.have.length(1);
   })
 })

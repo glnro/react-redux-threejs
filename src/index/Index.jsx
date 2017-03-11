@@ -7,7 +7,8 @@ export default class Index extends Component {
 
     return(
       <div>
-        <h1>Hello World</h1>
+        <button className="counter-button">+</button>
+        <h5 className="counter-number">0</h5>
       </div>
     )}
 }
