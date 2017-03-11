@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React, {Component} from 'react';
 import { Route, Router, Link, IndexRoute, browserHistory } from 'react-router';
 import { render } from 'react-dom';
@@ -7,18 +8,20 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger'; //Debug tool
 import welcomeReducer from './welcome/welcomeReducer';
 import IndexComponent from './index/Index';
-import 'babel-polyfill';
 
 
 
-class App extends Component {
+export default class App extends Component {
 
   render() {
 
     return(
-      <Router history={browserHistory}>
-        <Route path="/" component={IndexComponent} />
-      </Router>
+      <div>
+        <Router history={browserHistory}>
+          <Route path="/" component={IndexComponent} />
+        </Router>
+      </div>
+
     )
 
   }
@@ -36,5 +39,4 @@ render(
   <Provider store={store}>
     <App/>
   </Provider>,
-  document.querySelector('#main')
-);
+  document.querySelector('body'));
