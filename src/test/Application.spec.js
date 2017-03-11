@@ -6,11 +6,11 @@ import { Provider } from 'react-redux';
 
 import welcomeReducer from '../welcome/welcomeReducer';
 import App from '../App';
-import Index from '../index/Index.jsx';
+import Counter from '../counter/Counter.jsx';
 
 describe('<App/>', () => {
 
-  it('should render an Index component',() => {
+  it('should render a Counter component',() => {
     let mockState = () => {
       return( welcomeReducer: {} );
     }
@@ -19,7 +19,7 @@ describe('<App/>', () => {
 
     let wrapper = mount(
       <Provider store={mockStore}>
-        <Index/>
+        <Counter/>
       </Provider>);
 
     expect(wrapper.find('div')).to.have.length(1);

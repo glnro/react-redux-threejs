@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger'; //Debug tool
 import welcomeReducer from './welcome/welcomeReducer';
-import IndexComponent from './index/Index';
+import CounterComponent from './counter/Counter';
 
 
 
@@ -18,7 +18,7 @@ export default class App extends Component {
     return(
       <div>
         <Router history={browserHistory}>
-          <Route path="/" component={IndexComponent} />
+          <Route path="/" component={CounterComponent} />
         </Router>
       </div>
 
