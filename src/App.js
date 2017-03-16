@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger'; //Debug tool
 import welcomeReducer from './welcome/welcomeReducer';
+import counterReducer from './counter/CounterReducer';
 import CounterComponent from './counter/Counter';
 
 
@@ -29,8 +30,13 @@ export default class App extends Component {
 
 const logger = createLogger();
 
-const store = createStore(
+const rootReducer = combineReducers({
   welcomeReducer,
+  counterReducer
+})
+
+const store = createStore(
+  rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   applyMiddleware(thunk, logger)
 );

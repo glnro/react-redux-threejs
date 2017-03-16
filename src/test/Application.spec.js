@@ -3,22 +3,43 @@ import { shallow, mount } from 'enzyme';
 import { expect } from 'chai';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-
+import thunk from 'redux-thunk';
 import welcomeReducer from '../welcome/welcomeReducer';
+import counterReducer from '../counter/CounterReducer';
 import App from '../App';
 import Counter from '../counter/Counter.jsx';
 
 describe('<App/>', () => {
 
   it('should render a Counter component',() => {
-    let mockState = () => {
-      return( welcomeReducer: {} );
+
+    const rootReducer = combineReducers({
+      welcomeReducer,
+      counterReducer,
+    })
+
+    // let  initializeEmptyState = () => {
+    //   return ({
+    //     welcomeReducer: {},
+    //     counterReducer: {counter: 0}
+    //   })
+    // }
+
+    let initialState = {
+      welcomeReducer: {},
+      counterReducer: {counter: 0}
     }
 
-    let mockStore = createStore(mockState());
+    const mockStore = () => {
+      return (createStore(
+        rootReducer,
+        initialState,
+        applyMiddleware(thunk)
+      ))
+    }
 
     let wrapper = mount(
-      <Provider store={mockStore}>
+      <Provider store={mockStore()}>
         <Counter/>
       </Provider>);
 

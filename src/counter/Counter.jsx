@@ -1,6 +1,6 @@
 import React , { Component, PropTypes} from 'react';
 
-export default class Index extends Component {
+export default class Counter extends Component {
 
   render(){
 
