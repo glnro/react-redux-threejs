@@ -9,9 +9,6 @@ import Counter from './Counter';
 
 describe('Counter', () => {
 
-  //initialize state with indexCounter
-  //component should be rendering a counter object with the number and a button
-
   it('should render a counter button', () => {
     const wrapper = shallow(<Counter/>);
     expect(wrapper.find('.counter-button').type()).to.equal('button');

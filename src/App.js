@@ -8,7 +8,7 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger'; //Debug tool
 import welcomeReducer from './welcome/welcomeReducer';
 import counterReducer from './counter/CounterReducer';
-import CounterComponent from './counter/Counter.jsx';
+import CounterContainer from './counter/CounterContainer';
 
 
 
@@ -20,7 +20,7 @@ export default class App extends Component {
     return(
       <div>
         <Router history={browserHistory}>
-          <Route path="/" component={CounterComponent} />
+          <Route path="/" component={CounterContainer} />
         </Router>
       </div>
 

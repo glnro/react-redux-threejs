@@ -6,7 +6,7 @@ import Counter from './Counter.jsx';
 
 
 const mapStateToProps = (state) => ({
-  counter: state.counterReducer.counter
+  counterValue: state.counterReducer.counterValue
 })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators(
