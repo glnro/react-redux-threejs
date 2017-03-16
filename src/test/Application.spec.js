@@ -18,16 +18,9 @@ describe('<App/>', () => {
       counterReducer,
     })
 
-    // let  initializeEmptyState = () => {
-    //   return ({
-    //     welcomeReducer: {},
-    //     counterReducer: {counter: 0}
-    //   })
-    // }
-
     let initialState = {
       welcomeReducer: {},
-      counterReducer: {counter: 0}
+      counterReducer: {counterValue: 0}
     }
 
     const mockStore = () => {
