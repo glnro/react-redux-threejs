@@ -8,7 +8,8 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger'; //Debug tool
 import welcomeReducer from './welcome/welcomeReducer';
 import counterReducer from './counter/CounterReducer';
-import CounterComponent from './counter/Counter';
+import CounterComponent from './counter/Counter.jsx';
+
 
 
 

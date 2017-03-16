@@ -18,10 +18,7 @@ module.exports = {
     'react/lib/ReactContext': true
   },
   devtool: 'sourcemap',
-  entry : [
-      'babel-polyfill',
-      '../src/App.js'
-  ],
+  entry: './src/App.js',
   module: {
     loaders:  [
       {test: /\.js$/,include: __dirname + '/src',loader: 'babel-loader',query: {presets: ['react', 'es2015']} },
