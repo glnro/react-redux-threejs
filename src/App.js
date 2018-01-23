@@ -4,7 +4,7 @@ import { Route, Router, Link, IndexRoute, browserHistory } from 'react-router';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga'
 import createLogger from 'redux-logger'; //Debug tool
 import welcomeReducer from './welcome/welcomeReducer';
 import counterReducer from './counter/CounterReducer';
@@ -30,6 +30,7 @@ export default class App extends Component {
 }
 
 const logger = createLogger();
+const sagaMiddleware = createSagaMiddleware()
 
 const rootReducer = combineReducers({
   welcomeReducer,
@@ -39,7 +40,7 @@ const rootReducer = combineReducers({
 const store = createStore(
   rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(thunk, logger)
+  applyMiddleware(sagaMiddleware, logger)
 );
 
 render(
