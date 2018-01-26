@@ -55,15 +55,23 @@ export default class Scene extends Component{
   }
 
   addElement(element){
+    console.log(element.id)
     this.scene.add(element)
   }
 
   render() {
+
+    const {cubes, addCube } = this.props;
     return (
-      <div
-        id="WebGL-output"
-        ref={(mount) => { this.mount = mount }}
-      />
+      <div>
+        <div
+          id="WebGL-output"
+          ref={(mount) => { this.mount = mount }}
+        />
+        <button className="cube-button" onClick={addCube}>+</button>
+
+      </div>
+
     )
   }
 }
