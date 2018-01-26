@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import CounterContainer from './counter/CounterContainer';
+import Scene from './scene/Scene.jsx';
 
 class App extends Component {
 
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
         <h1>Hello World</h1>
         <CounterContainer />
+        <Scene />
       </div>);
   }
 }
