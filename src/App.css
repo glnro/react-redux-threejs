@@ -1,3 +1,15 @@
 .App{
   text-align: center;
 }
+
+#WebGL-output{
+  background: #000000;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed !important;
+  border: 2px solid white;
+}
