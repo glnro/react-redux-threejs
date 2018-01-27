@@ -14,16 +14,12 @@ export default class Scene extends Component{
       const camera = new THREE.PerspectiveCamera(
         75, width/height,1,1000
       )
-      camera.position.z = 3;
+      camera.position.z = 5;
       const renderer = new THREE.WebGLRenderer({antialias: true})
       renderer.setClearColor('#000000')
       renderer.setSize(width, height)
       let geometry = new THREE.BoxGeometry( 1, 1, 1 );
       let material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-
-      let newCube = Cube()
-      let newCube2 = Cube()
-
       this.scene = scene
       this.camera = camera
       this.renderer = renderer
@@ -49,7 +45,7 @@ export default class Scene extends Component{
   }
 
   animate() {
-    this.props.cubes.map(cube => this.addElement(cube))
+    this.props.cubes.map(cube => this.addElement(cube.geometry))
     this.renderScene()
     this.frameId =  window.requestAnimationFrame(this.animate)
   }
