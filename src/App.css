@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-#WebGL-output{
+/* #WebGL-output{
   background: #000000;
   z-index: -1;
   overflow: hidden;
@@ -12,4 +12,4 @@
   left: 0;
   position: fixed !important;
   border: 2px solid white;
-}
+} */
